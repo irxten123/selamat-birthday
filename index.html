@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+    <title>Happy Birthday💖💖💖</title>
+    
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Sans-Serif;
+      }
+      
+      body{
+        background: #f8cdd5;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto;
+        padding: 30px 0;
+      }
+      
+      .container{
+        text-align: center;
+      }
+      
+      .video{
+        width: 320px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      }
+      
+      .envelope{
+        width: 320px;
+        height: 320px;
+        background: white;
+        border: 4px solid #333;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      }
+      
+      .bear{
+        position: absolute;
+        top: -10px;
+        right: -15px;
+        font-size: 90px;
+      }
+      
+      .heart-btn{
+        width: 75px;
+        height: 75px;
+        background: #ff4f87;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        color: white;
+        font-size: 32px;
+        cursor: pointer;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+      
+      .heart-btn:hover{
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+      
+      .message{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: white;
+        top: 100%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
+        color: #333;
+        transition: 0.6s;
+        line-height: 1.5;
+      }
+      
+      #typing{
+  white-space: pre-line;
+      }
+      
+      .show{
+        top: 0;
+      }
+      
+      h2{
+        margin-top: 20px;
+        color: #333;
+        letter-spacing: 3px;
+        font-size: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+      <video class="video" autoplay loop
+      controls>
+        <source src="video-hbd.mp4" type="video/mp4">
+      </video>
+      
+      <div class="envelope">
+        
+        <div class="bear">🧸</div>
+        
+        <div class="heart-btn" onclick="openLetter()">
+          💖💖
+        </div>
+        
+        <div class="message" id="message">
+          <p id="typing"></p>
+        </div>
+        
+      </div>
+      
+      <h2>BUAT KAMU</h2>
+      
+    </div>
+    
+    <script>
+      function openLetter(){
+        document.getElementById("message").classList.toggle("show");
+      }
+    </script>
+    
+    <script>
+const text =
+"Hai sayang 💖\nSelamat ulangtahun ke 18 ya!!! 🎉🎂\nSemoga panjang umur, sehat selalu, jadi maba ITB ✨\n\  pola makannya dijaga, jangan kebanyakan begadang, jangan banyak begadang juga\nKalo ada masalah bisa cerita ke aku, nanti aku ledekin dulu baru kasih solusi 😜😜😜";
+
+let i = 0;
+
+function typeWriter(){
+
+  if(i < text.length){
+
+    document.getElementById("typing").innerHTML +=
+    text.charAt(i);
+
+    i++;
+
+    setTimeout(typeWriter, 70);
+  }
+}
+
+function openLetter(){
+
+  document.getElementById("message")
+  .classList.toggle("show");
+
+  if(i === 0){
+    typeWriter();
+  }
+}
+
+</script>
+    
+  </body>
+</html>
